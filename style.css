@@ -12,6 +12,20 @@ body {
     width: 416px;
     justify-content: center;
 }
+.logo {
+    animation: rotation 8s infinite linear;
+}
+.logo:hover {
+    animation-play-state: paused;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 @media(max-width: 991px) {
     .menu-bg {
@@ -43,6 +57,9 @@ body {
 
 .btn-purple:hover {
     background-color: #753dca;
+}
+.footer-link:nth-child{
+    margin: 0 24px
 }
 
 @media (max-width: 1400px) {
@@ -107,4 +124,10 @@ body {
 
 .dota-img:hover {
     background-color: #fcd8ff;
+}
+.footer-content {
+    flex-direction: column;
+}
+.footer-link:nth-child{
+    margin: 0
 }
