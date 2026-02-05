@@ -1,23 +1,28 @@
 * {
+    margin: 0;
     box-sizing: border-box;
 }
-
 body {
-    background-color: #1b1c1f;
+    background: #1b1c1f;
 }
-
 .navigation {
     background-color: #323335;
     border-radius: 24px;
     width: 416px;
     justify-content: center;
 }
+
 .logo {
-    animation: rotation 8s infinite linear;
+    animation-name: rotation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+
 .logo:hover {
     animation-play-state: paused;
 }
+
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
@@ -27,7 +32,8 @@ body {
     }
 }
 
-@media(max-width: 991px) {
+
+@media (max-width: 991px) {
     .menu-bg {
         background-color: #323335;
     }
@@ -35,7 +41,10 @@ body {
         background-color: #fff;
     }
     .nav-link:nth-child(2) {
-    margin: 0 !important;
+        margin: 0 !important;
+    }
+    .btn-purple {
+        display: block;
     }
 }
 
@@ -57,9 +66,6 @@ body {
 
 .btn-purple:hover {
     background-color: #753dca;
-}
-.footer-link:nth-child{
-    margin: 0 24px
 }
 
 @media (max-width: 1400px) {
@@ -94,7 +100,7 @@ body {
     justify-content: center;
     align-items: flex-end;
     border-radius: 56px;
-    margin-right: 8px;
+    margin-left: 8px;
     background-color: #fdf386;
     transition: 0.2s ease-in;
     overflow-y: clip;
@@ -103,6 +109,7 @@ body {
 .fortnite-img:hover {
     background-color: #71e66e;
 }
+
 .dota-img {
     width: 100%;
     height: 330px;
@@ -112,7 +119,7 @@ body {
     border-radius: 56px;
     background-color: #69adfd;
     transition: 0.2s ease-in;
-    overflow-y: clip;
+    overflow: clip;
 }
 
 .dota-img img {
@@ -123,11 +130,33 @@ body {
 }
 
 .dota-img:hover {
-    background-color: #fcd8ff;
+    background-color: #fcb8ff;
 }
-.footer-content {
-    flex-direction: column;
+
+.footer-link:nth-child(2) {
+    margin: 0 24px;
 }
-.footer-link:nth-child{
-    margin: 0
+
+@media (max-width: 420px) {
+    .first-card-row {
+        flex-direction: column;
+    }
+    .gta-img {
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+    .fortnite-img {
+        margin: 0;
+    }
+    .hero-title {
+        font-size: 38px;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer-link:nth-child(2) {
+        margin: 0;
+    }
 }
+
+
